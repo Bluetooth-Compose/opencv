@@ -1,3 +1,29 @@
+## Bluetooth-Compose additional notes:
+
+We built OpenCV for Android and iOS, as follows:
+
+```cd ~/``` [Enter]
+
+```pwd```  [Enter]
+
+```/Users/developer```
+
+```git clone https://github.com/Bluetooth-Compose/opencv.git```  [Enter] i.e. opencv repo
+
+```git clone https://github.com/Bluetooth-Compose/opencv_contrib.git```  [Enter] i.e. opencv_contrib repo
+
+we also ensured that the following paths DID NOT exist:
+
+- /Users/developer/android
+- /Users/developer/ios
+
+we then ran the following two commands:
+
+- ```python opencv/platforms/ios/build_framework.py ios --contrib ./opencv_contrib```
+- ```python opencv/platforms/android/build_sdk.py android opencv  --extra_modules_path ./opencv_contrib/modules --sdk_path /Users/developer/Library/Android/sdk --ndk_path /Users/developer/Library/Android/sdk/ndk/24.0.8215888```
+
+The rest of this ReadMe is the original fiorked ReadMe
+
 ## OpenCV: Open Source Computer Vision Library
 
 ### Resources
